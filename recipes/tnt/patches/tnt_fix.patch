@@ -1,0 +1,26 @@
+diff -u a/tnt/tnt_math_utils.h b/tnt_math_utils.h
+--- a/tnt/tnt_math_utils.h	2020-09-30 17:43:55.000000000 -0700
++++ b/tnt/tnt_math_utils.h	2020-09-30 19:21:37.000000000 -0700
+@@ -20,8 +20,9 @@
+ 	
+ 	if (a== 0)
+         {
+-                // issues warnings because b is not the correct type for abs()
++                // issues warnings because b is not the right type for abs()
+ 		//return abs(b);
++
+ 		return fabs(b);
+         }
+ 	else
+diff -u a/tnt/tnt_sparse_matrix_csr.h b/tnt/tnt_sparse_matrix_csr.h
+--- a/tnt/tnt_sparse_matrix_csr.h	2020-09-30 17:43:55.000000000 -0700
++++ b/tnt/tnt_sparse_matrix_csr.h	2020-09-30 19:21:37.000000000 -0700
+@@ -94,7 +94,7 @@
+ template <class T>
+ Sparse_Matrix_CompRow<T>::Sparse_Matrix_CompRow(int M, int N, int nz,
+ 	const T *val, const int *r, const int *c) : val_(nz,val), 
+-		rowptr_(M, r), colind_(nz, c), dim1_(M), dim2_(N) {}
++		rowptr_(M, *r), colind_(nz, *c), dim1_(M), dim2_(N) {}
+ 
+ 
+ }

@@ -6,6 +6,10 @@ package:
 source:
   fn: master.zip
   url: https://github.com/USGS-Astrogeology/TNT/archive/master.zip
+  patches: patches/tnt_fix.patch
+
+build:
+  number: 1
 
 about:
   home: http://math.nist.gov/tnt/

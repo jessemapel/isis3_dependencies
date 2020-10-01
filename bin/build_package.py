@@ -32,7 +32,7 @@ def write_meta(meta_inp, meta_outp, config):
 def build_pkg(recipe_path, outputdir, config):
     build_config={
         'output_folder': outputdir,
-        'python': config.get('python', '2.7'),
+#        'python': config.get('python', '2.7'),
         'numpy': config.get('numpy', '1.11'),
         'channels': config.get('channel'),
 

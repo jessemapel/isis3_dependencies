@@ -1,5 +1,5 @@
 #!/bin/tcsh
-cp /usgs/apps/kakadu/v7_9_1-01762L.zip . 
+scp lastrovm5:/usgs/apps/kakadu/v7_9_1-01762L.zip . 
 unzip v7_9_1-01762L.zip
 cd v7_9_1-01762L/make
 
